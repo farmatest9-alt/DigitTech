@@ -1,0 +1,312 @@
+/* ==========================
+   DIGITTECH - STYLE.CSS
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#090b1d;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* Dégradé animé */
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(-45deg,#0d1b52,#4b00ff,#00bfff,#00d084);
+background-size:400% 400%;
+animation:bg 15s ease infinite;
+z-index:-2;
+opacity:.15;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Navbar */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#FFD700;
+}
+
+.navbar ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.navbar a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.navbar a:hover{
+color:#00E5FF;
+}
+
+/* Hero */
+
+.hero{
+min-height:100vh;
+background:url("banniere.jpg") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:100px 20px;
+}
+
+.overlay{
+background:rgba(0,0,0,.70);
+padding:50px;
+border-radius:25px;
+max-width:850px;
+text-align:center;
+backdrop-filter:blur(12px);
+}
+
+.overlay h1{
+font-size:60px;
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.overlay h2{
+font-size:34px;
+color:#00E5FF;
+margin-bottom:20px;
+}
+
+.overlay p{
+font-size:19px;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+/* Bouton */
+
+.btn{
+display:inline-block;
+padding:18px 35px;
+border-radius:50px;
+background:linear-gradient(90deg,#25D366,#00E5FF);
+color:#fff;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+box-shadow:0 0 20px rgba(0,229,255,.4);
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+/* Sections */
+
+section{
+padding:80px 10%;
+}
+
+section h2{
+text-align:center;
+font-size:38px;
+margin-bottom:45px;
+color:#FFD700;
+}
+
+/* Cartes */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+backdrop-filter:blur(8px);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00E5FF;
+}
+
+.card i{
+font-size:50px;
+color:#00E5FF;
+margin-bottom:20px;
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+/* VIP */
+
+.vip{
+text-align:center;
+}
+
+.vip img{
+width:100%;
+max-width:700px;
+border-radius:20px;
+margin:30px auto;
+display:block;
+border:4px solid #00E5FF;
+box-shadow:0 0 30px rgba(0,229,255,.4);
+}
+
+/* Avis */
+
+.avis .card{
+font-style:italic;
+}
+
+/* Statistiques */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stats div{
+background:rgba(255,255,255,.08);
+padding:35px;
+border-radius:20px;
+}
+
+.stats h1{
+font-size:50px;
+color:#FFD700;
+}
+
+/* Footer */
+
+footer{
+padding:60px 20px;
+text-align:center;
+background:linear-gradient(90deg,#5B00FF,#0066FF,#00E5FF,#25D366);
+}
+
+footer h2{
+margin-bottom:20px;
+}
+
+footer p{
+margin:20px auto;
+max-width:700px;
+line-height:1.8;
+}
+
+.copy{
+margin-top:30px;
+font-size:15px;
+opacity:.9;
+}
+
+/* WhatsApp flottant */
+
+.floating{
+position:fixed;
+bottom:25px;
+right:25px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+font-size:34px;
+text-decoration:none;
+box-shadow:0 0 20px #25D366;
+animation:pulse 2s infinite;
+z-index:999;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+.navbar ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.overlay h1{
+font-size:42px;
+}
+
+.overlay h2{
+font-size:24px;
+}
+
+.overlay{
+padding:30px;
+}
+
+section{
+padding:60px 20px;
+}
+
+}
+
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:all .8s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
