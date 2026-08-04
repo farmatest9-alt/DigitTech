@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nos Formations | DigitTech</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="left-part">
+
+<button class="menu-btn" onclick="toggleMenu()">
+☰
+</button>
+
+<img src="images/logo.png"
+class="logo-img"
+alt="DigitTech">
+
+<div class="logo-text">
+
+DigitTech
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- MENU -->
+
+<div id="sideMenu" class="side-menu">
+
+<a href="index.html">🏠 Accueil</a>
+
+<a href="formation.html">🎓 Formation</a>
+
+<a href="groupe-vip.html">🔒 Groupe VIP</a>
+
+<a href="preuves.html">📹 Preuves</a>
+
+<a href="avis.html">⭐ Avis</a>
+
+<a href="bonus.html">🎁 Bonus</a>
+
+<a href="faq.html">❓ FAQ</a>
+
+<a href="contact.html">📞 Contact</a>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="overlay">
+
+<h1>🎓 Nos Formations</h1>
+
+<h2>Développez des compétences rentables grâce à l'IA</h2>
+
+<p>
+
+Choisissez la formation qui vous intéresse.
+
+Après avoir découvert le programme, cliquez simplement sur
+
+<strong>S'inscrire</strong>
+
+pour contacter directement l'administrateur.
+
+</p>
+
+<a class="btn"
+
+href="https://chat.whatsapp.com/LmYWZEWiy858A6v1QmBG44?s=cl&p=a&ilr=4&amv=0"
+
+target="_blank">
+
+📢 Rejoindre le Groupe d'Annonce
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FORMATIONS ================= -->
+
+<section class="formation">
+
+<h2>Nos Formations Premium</h2>
+
+<div class="cards">
+
+<!-- VIDEO IA -->
+
+<div class="card"
+
+onclick="openModal('videoModal')">
+
+<i class="fa-solid fa-video"></i>
+
+<h3>Création de Vidéos IA</h3>
+
+<p>
+
+Créez des vidéos professionnelles avec les meilleurs outils IA.
+
+</p>
+
+</div>
+
+<!-- CANVA -->
+
+<div class="card"
+
+onclick="openModal('canvaModal')">
+
+<i class="fa-solid fa-palette"></i>
+
+<h3>Création de Contenu IA<br>Canva Pro</h3>
+
+<p>
+
+Affiches, logos, publications, miniatures et bien plus.
+
+</p>
+
+</div>
+
+<!-- TIKTOK -->
+
+<div class="card"
+
+onclick="openModal('tiktokModal')">
+
+<i class="fa-brands fa-tiktok"></i>
+
+<h3>Monétisation TikTok</h3>
+
+<p>
+
+Développez un compte professionnel et découvrez les méthodes de monétisation.
+
+</p>
+
+</div>
+
+<!-- AFFICHE -->
+
+<div class="card"
+
+onclick="openModal('afficheModal')">
+
+<i class="fa-solid fa-image"></i>
+
+<h3>Création d'Affiches Publicitaires</h3>
+
+<p>
+
+Concevez des affiches premium qui attirent immédiatement les clients.
+
+</p>
+
+</div>
+
+<!-- MUSIQUE -->
+
+<div class="card"
+
+onclick="openModal('musicModal')">
+
+<i class="fa-solid fa-music"></i>
+
+<h3>Musique Personnalisée IA</h3>
+
+<p>
+
+Composez des musiques, chansons et voix IA de qualité professionnelle.
+
+</p>
+
+</div>
+
+<!-- CLIP -->
+
+<div class="card"
+
+onclick="openModal('clipModal')">
+
+<i class="fa-solid fa-film"></i>
+
+<h3>Création de Clips Musicaux IA</h3>
+
+<p>
+
+Transformez une chanson en clip vidéo moderne grâce à l'IA.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================
+LES FENÊTRES (MODALS)
+Seront ajoutées dans la Partie 2
+=================== -->
+
+<!-- ================= VIDEO IA ================= -->
+
+<div id="videoModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal('videoModal')">&times;</span>
+
+<h2>🎥 Formation Création de Vidéos IA</h2>
+
+<p>
+
+Apprenez à créer des vidéos professionnelles, publicitaires et cinématographiques grâce aux meilleurs outils d'Intelligence Artificielle.
+
+</p>
+
+<div class="gallery">
+  <img src="Images/affiche2.png" alt="affiche">
+</div>
+
+<h3>📚 Au programme</h3>
+
+<ul>
+
+<li>✅ Les meilleurs outils IA</li>
+
+<li>✅ Création de vidéos cinématographiques</li>
+
+<li>✅ Publicités professionnelles</li>
+
+<li>✅ Animation d'images</li>
+
+<li>✅ Storytelling</li>
+
+<li>✅ Voix IA réalistes</li>
+
+<li>✅ Sous-titres automatiques</li>
+
+<li>✅ Export HD / Full HD / 4K</li>
+
+</ul>
+
+<h3>🎬 Démonstration</h3>
+
+<video controls width="100%">
+
+<source src="Videos/videoT.mp4" type="video/mp4">
+
+</video>
+
+<br><br>
+
+<video controls width="100%">
+
+<source src="Videos/video3.mp4" type="video/mp4">
+
+</video>
+
+<br><br>
+
+<video controls width="100%">
+
+<source src="Videos/exemple1.mp4" type="video/mp4">
+
+</video>
+
+<br><br>
+
+<a class="btn"
+
+href="https://wa.me/22663400608?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20m'inscrire%20à%20la%20formation%20Création%20de%20Vidéos%20IA.%20Merci%20de%20m'indiquer%20la%20procédure."
+
+target="_blank">
+
+📲 S'inscrire
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ================= CANVA ================= -->
+
+<div id="canvaModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal('canvaModal')">&times;</span>
+
+<h2>🎨 Formation Création de Contenu IA & Canva Pro</h2>
+
+<p>
+
+Apprenez à créer des contenus professionnels pour les entreprises, les réseaux sociaux et vos propres projets.
+
+</p>
+
+<div class="gallery">
+  <img src="Images/affiche1.png" alt="affiche">
+</div>
+
+<h3>📚 Au programme</h3>
+
+<ul>
+
+<li>✅ Canva Pro</li>
+
+<li>✅ Logos Premium</li>
+
+<li>✅ Flyers</li>
+
+<li>✅ Affiches Publicitaires</li>
+
+<li>✅ Cartes de visite</li>
+
+<li>✅ Publications Facebook</li>
+
+<li>✅ Stories Instagram</li>
+
+<li>✅ Miniatures YouTube</li>
+
+<li>✅ Carrousels</li>
+
+<li>✅ Supports marketing</li>
+
+<li>✅  Vidéo IA, Musique Personnalisée, Clip vidéo</li>
+
+</ul>
+
+<h3>🖼 Quelques réalisations</h3>
+
+<div class="gallery">
+
+<img src="images/concert.jpg">
+
+<img src="images/carte.jpg">
+
+<img src="images/flyers.jpg">
+
+<img src="images/support.jpg">
+
+</div>
+
+<br>
+
+<a class="btn"
+
+href="https://wa.me/22663400608?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20m'inscrire%20à%20la%20formation%20Création%20de%20Contenu%20IA%20Canva%20Pro.%20Merci."
+
+target="_blank">
+
+📲 S'inscrire
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ================= TIKTOK ================= -->
+
+<div id="tiktokModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal('tiktokModal')">&times;</span>
+
+<h2>📱 Formation Monétisation TikTok</h2>
+
+<p>
+
+Apprenez à créer un compte TikTok professionnel, développer votre audience et découvrir les différentes méthodes de monétisation proposées par la plateforme selon les critères d'éligibilité.
+
+</p>
+
+<h3>📚 Au programme</h3>
+
+<ul>
+
+<li>✅ Création d'un compte professionnel</li>
+
+<li>✅ Choisir une niche rentable</li>
+
+<li>✅ Création de vidéos virales</li>
+
+<li>✅ Utilisation des tendances</li>
+
+<li>✅ Algorithme TikTok</li>
+
+<li>✅ Développement de l'audience</li>
+
+<li>✅ Différentes possibilités de monétisation</li>
+
+<li>✅ Vente de produits et services</li>
+
+<li>✅ Analyse des statistiques</li>
+
+<li>✅ Développement d'un business durable</li>
+
+</ul>
+
+<h3>🎁 Bonus</h3>
+
+<ul>
+
+<li>🎁 Plus de 500 idées de vidéos</li>
+
+<li>🎁 Bibliothèque de prompts IA</li>
+
+<li>🎁 Outils recommandés</li>
+
+<li>🎁 Astuces de croissance</li>
+
+</ul>
+
+<img src="images/TIKTOK.jpg" width="100%" style="border-radius:15px; margin-top:20px;">
+
+<br><br>
+
+<a class="btn"
+
+href="https://wa.me/22663400608?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20m'inscrire%20à%20la%20formation%20Monétisation%20TikTok.%20Merci%20de%20m'indiquer%20la%20procédure."
+
+target="_blank">
+
+📲 S'inscrire
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ================= AFFICHE PUBLICITAIRE ================= -->
+
+<div id="afficheModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal('afficheModal')">&times;</span>
+
+<h2>📢 Création d'Affiches Publicitaires</h2>
+
+<p>
+
+Apprenez à créer des affiches professionnelles qui attirent immédiatement l'attention et donnent envie d'acheter.
+
+</p>
+
+
+<div class="gallery">
+  <img src="Images/canva.jpg" alt="affiche">
+</div>
+
+<h3>📚 Au programme</h3>
+
+<ul>
+
+<li>✅ Affiches publicitaires modernes</li>
+
+<li>✅ Flyers professionnels</li>
+
+<li>✅ Affiches de formations</li>
+
+<li>✅ Publicités Facebook</li>
+
+<li>✅ Publicités Instagram</li>
+
+<li>✅ Publicités TikTok</li>
+
+<li>✅ Bannières</li>
+
+<li>✅ Affiches 3D Premium</li>
+
+</ul>
+
+<div class="gallery">
+
+<img src="images/sante.jpg">
+
+<img src="images/3D.jpg">
+
+<img src="images/art.jpg">
+
+<img src="images/Aube.jpg">
+
+</div>
+
+<br>
+
+<a class="btn"
+
+href="https://wa.me/22663400608?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20m'inscrire%20à%20la%20formation%20Création%20d'Affiches%20Publicitaires.%20Merci."
+
+target="_blank">
+
+📲 S'inscrire
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ================= MUSIQUE IA ================= -->
+
+<div id="musicModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal('musicModal')">&times;</span>
+
+<h2>🎵 Musique Personnalisée IA</h2>
+
+<p>
+
+Apprenez à créer vos propres chansons avec l'Intelligence Artificielle.
+
+</p>
+
+
+<div class="gallery">
+  <img src="Images/musicIA.jpg" alt="affiche">
+</div>
+
+<h3>📚 Au programme</h3>
+
+<ul>
+
+<li>✅ Afrobeat</li>
+
+<li>✅ Rap</li>
+
+<li>✅ Gospel</li>
+
+<li>✅ Slam</li>
+
+<li>✅ Musique d'anniversaire</li>
+
+<li>✅ Génériques</li>
+
+<li>✅ Mastering</li>
+
+</ul>
+
+<h3>🎧 Exemple</h3>
+
+<audio controls>
+
+<source src="audio/DigitTech.mp3" type="audio/mpeg">
+
+</audio>
+
+<br><br>
+
+<audio controls>
+
+<source src="audio/laafi.mp3" type="audio/mpeg">
+
+</audio>
+
+<br><br>
+
+<audio controls>
+
+<source src="audio/eleve.mp3" type="audio/mpeg">
+
+</audio>
+
+<br><br>
+
+<audio controls>
+
+<source src="audio/Slam.mp3" type="audio/mpeg">
+
+</audio>
+
+<br><br>
+
+<audio controls>
+
+<source src="audio/Anniv.mp3" type="audio/mpeg">
+
+</audio>
+
+<br><br>
+
+<audio controls>
+
+<source src="audio/generique.mp3" type="audio/mpeg">
+
+</audio>
+
+<br><br>
+
+<audio controls>
+
+<source src="audio/Deca.mp3" type="audio/mpeg">
+
+</audio>
+
+<br><br>
+
+<a class="btn"
+
+href="https://wa.me/22663400608?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20m'inscrire%20à%20la%20formation%20Musique%20Personnalisée%20IA.%20Merci."
+
+target="_blank">
+
+📲 S'inscrire
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ================= CLIP MUSICAL ================= -->
+
+<div id="clipModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal('clipModal')">&times;</span>
+
+<h2>🎬 Création de Clips Musicaux IA</h2>
+
+<p>
+
+Transformez une simple musique en clip vidéo professionnel grâce aux outils IA.
+
+</p>
+
+
+<div class="gallery">
+  <img src="Images/afficheclip.png" alt="affiche">
+</div>
+
+<h3>📚 Au programme</h3>
+
+<ul>
+
+<li>✅ Storyboard IA</li>
+
+<li>✅ Création scène par scène</li>
+
+<li>✅ Synchronisation musicale</li>
+
+<li>✅ Effets cinématographiques</li>
+
+<li>✅ Animation IA</li>
+
+<li>✅ Export HD et 4K</li>
+
+</ul>
+
+<video controls width="100%">
+
+<source src="videos/clip3.mp4" type="video/mp4">
+
+</video>
+
+<br><br>
+
+<video controls width="100%">
+
+<source src="videos/clip2.mp4" type="video/mp4">
+
+</video>
+
+<br><br>
+
+<a class="btn"
+
+href="https://wa.me/22663400608?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20m'inscrire%20à%20la%20formation%20Création%20de%20Clips%20Musicaux%20IA.%20Merci."
+
+target="_blank">
+
+📲 S'inscrire
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>🚀 Développez vos compétences avec DigitTech</h2>
+
+<p>
+
+Toutes nos formations sont accompagnées d'un suivi personnalisé et d'un accès au Groupe VIP après inscription.
+
+</p>
+
+<a class="btn"
+
+href="https://chat.whatsapp.com/LmYWZEWiy858A6v1QmBG44?s=cl&p=a&ilr=4&amv=0"
+
+target="_blank">
+
+📢 Rejoindre le Groupe d'Annonce
+
+</a>
+
+<p class="copy">
+
+© 2026 DigitTech • Tous droits réservés
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
