@@ -1836,3 +1836,43 @@ font-size:28px;
     border-radius:18px;
     border:3px solid #00E5FF;
 }
+
+
+/* ===========================
+   ICÔNES
+=========================== */
+
+.card i{
+    width:80px;
+    height:80px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    color:#00E5FF;
+    background:rgba(255,255,255,.08);
+    border:2px solid rgba(0,229,255,.35);
+    border-radius:50%;
+    transition:.4s;
+    box-shadow:0 0 20px rgba(0,229,255,.20);
+}
+
+.card:hover i{
+    background:#00E5FF;
+    color:#081122;
+    transform:rotate(360deg) scale(1.1);
+    box-shadow:0 0 30px #00E5FF;
+}
+
+/* Téléphone */
+
+@media (max-width:768px){
+
+.card i{
+    width:65px;
+    height:65px;
+    font-size:28px;
+}
+
+}
