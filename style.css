@@ -209,7 +209,13 @@ padding-left:40px;
 
 }
 
-.video-accueil { position: relative; }
+.video-accueil { 
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+ }
 
 #btnSon {
   position: absolute;
