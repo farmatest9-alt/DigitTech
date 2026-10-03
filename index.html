@@ -88,20 +88,13 @@ DigitTech
 <div class="overlay">
 
 <section class="video-accueil">
-  <video id="videoDigit" src="DigitTech_accueil.mp4" poster="DigitTech_poster.jpg"
-         autoplay muted loop playsinline preload="metadata"></video>
-  <button id="btnSon" type="button">🔇 Activer le son</button>
+  <video
+    src="DigitTech_accueil.mp4"
+    poster="DigitTech_poster.jpg"
+    autoplay muted loop playsinline controls
+    preload="metadata">
+  </video>
 </section>
-
-<script>
-  const v = document.getElementById('videoDigit');
-  const b = document.getElementById('btnSon');
-  b.addEventListener('click', () => {
-    v.muted = !v.muted;
-    if (!v.muted) { v.currentTime = 0; v.play(); }
-    b.textContent = v.muted ? '🔇 Activer le son' : '🔊 Couper le son';
-  });
-</script>
 
 <h1> DigitTech</h1>
 
