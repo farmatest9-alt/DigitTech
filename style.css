@@ -217,6 +217,16 @@ padding-left:40px;
   box-sizing: border-box;
  }
 
+
+.video-accueil video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  display: block;
+  background: #0a0f24;
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.35);
+}
+
 #btnSon {
   position: absolute;
   right: 30px;
