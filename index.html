@@ -1,39 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-<meta name="description" content="DigitTech - Formation en création de contenu, intelligence artificielle, design et compétences digitales au Burkina Faso.">
+<meta name="description" content="DigitTech - Formations pratiques en intelligence artificielle, création de contenu, design et compétences digitales au Burkina Faso.">
 <meta name="keywords" content="formation IA, Canva, création vidéo, DigitTech, Burkina Faso">
 <meta name="author" content="DigitTech">
 
 <link rel="icon" href="logo.png">
 
-<title>DigitTech | Accueil</title>
+<title>DigitTech | Formations digitales & Intelligence Artificielle</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-<meta name="google-site-verification" content="GcrLkKcwO7kmM07BwIQ-VLlIinz13vASOGLwvqbWff8" />
-
+<meta name="google-site-verification" content="GcrLkKcwO7kmM07BwIQ-VLlIinz13vASOGLwvqbWff8">
 
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -41,267 +37,297 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <div class="left-part">
 
-<button class="menu-btn" onclick="toggleMenu()">
-☰
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Ouvrir le menu">
+<i class="fa-solid fa-bars"></i>
 </button>
 
-<img src="logo.png"
-alt="DigitTech"
-class="logo-img">
-
-<div class="logo-text">
-DigitTech
-</div>
+<a href="index.html" class="brand">
+<img src="logo.png" alt="Logo DigitTech" class="logo-img">
+<span class="logo-text">DigitTech<span class="brand-dot">.</span></span>
+</a>
 
 </div>
+
+<a href="formation.html" class="nav-cta">
+Découvrir les formations
+<i class="fa-solid fa-arrow-right"></i>
+</a>
 
 </nav>
 
-<!-- MENU VERTICAL -->
-
 <div id="sideMenu" class="side-menu">
 
-<a href="index.html"> Accueil</a>
+<div class="menu-heading">
+<img src="logo.png" alt="DigitTech">
+<div>
+<strong>DigitTech</strong>
+<small>Apprendre. Créer. Réussir.</small>
+</div>
+</div>
 
-<a href="formation.html"> Formations</a>
-
-<a href="groupe-vip.html"> Groupe VIP</a>
-
-<a href="preuves.html"> Preuves</a>
-
-<a href="avis.html"> Avis</a>
-
-<a href="bonus.html"> Bonus</a>
-
-<a href="faq.html"> FAQ</a>
-
-<a href="contact.html"> Contact</a>
+<a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a>
+<a href="formation.html"><i class="fa-solid fa-graduation-cap"></i> Formations</a>
+<a href="groupe-vip.html"><i class="fa-solid fa-crown"></i> Groupe VIP</a>
+<a href="preuves.html"><i class="fa-solid fa-circle-check"></i> Preuves</a>
+<a href="avis.html"><i class="fa-solid fa-star"></i> Avis</a>
+<a href="bonus.html"><i class="fa-solid fa-gift"></i> Bonus</a>
+<a href="faq.html"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+<a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
 
 </div>
 
 </header>
 
-<!-- ================= HERO ================= -->
+<main>
+
+<!-- HERO -->
 
 <section class="hero">
 
 <div class="overlay">
 
-<section class="video-accueil">
-  <video
-    src="DigitTech_ccueil.mp4"
-    poster="DigitTech_poster.jpg"
-    autoplay muted loop playsinline controls
-    preload="metadata">
-  </video>
-</section>
+<div class="hero-label">
+<span></span>
+FORMATIONS DIGITALES & INTELLIGENCE ARTIFICIELLE
+</div>
 
-<h1> DigitTech</h1>
+<h1>Bienvenue chez <span>DigitTech</span></h1>
 
-<h2>Formation en Intelligence Artificielle</h2>
+<h2>Le numérique ouvre de nouvelles possibilités.</h2>
 
 <p>
-
 Développez des compétences recherchées grâce à nos formations pratiques en Intelligence Artificielle.
-
 Apprenez à créer du contenu professionnel, trouvez des clients et développez votre activité avec un accompagnement personnalisé.
+</p>
 
+<div class="hero-actions">
+
+<a class="btn" href="formation.html">
+Explorer les formations
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+
+<a class="btn-secondary"
+href="https://chat.whatsapp.com/JlaxVI8kq6m8McZjeliCpW?s=cl&p=a&mlu=4&ilr=4&iam=0"
+target="_blank" rel="noopener">
+<i class="fa-brands fa-whatsapp"></i>
+Rejoindre la communauté
+</a>
+
+</div>
+
+<div class="video-accueil">
+<video
+src="DigitTech_ccueil.mp4"
+poster="DigitTech_poster.jpg"
+autoplay muted loop playsinline controls
+preload="metadata">
+</video>
+</div>
+
+</div>
+
+</section>
+
+<!-- POURQUOI DIGITTECH -->
+
+<section class="why-section">
+
+<div class="section-heading">
+<span class="section-tag">POURQUOI DIGITTECH ?</span>
+<h2>Apprenez des compétences qui font la différence.</h2>
+<p>
+Des connaissances pratiques pour vous permettre de progresser dans le monde du numérique.
+</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon-wrap">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+<h3>Formation pratique</h3>
+<p>
+Des formations simples, concrètes et accessibles même aux débutants.
+</p>
+</div>
+
+<div class="card">
+<div class="icon-wrap">
+<i class="fa-solid fa-robot"></i>
+</div>
+<h3>Intelligence Artificielle</h3>
+<p>
+Apprenez à utiliser les meilleurs outils IA pour créer et innover.
+</p>
+</div>
+
+<div class="card">
+<div class="icon-wrap">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+<h3>Compétences rentables</h3>
+<p>
+Transformez vos compétences en véritables opportunités de revenus.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ACCOMPAGNEMENTS -->
+
+<section class="services-section">
+
+<div class="section-heading">
+<span class="section-tag">NOTRE ACCOMPAGNEMENT</span>
+<h2>Nous vous accompagnons à chaque étape.</h2>
+<p>
+Vous n'êtes pas seul dans votre apprentissage. Nous sommes là pour vous guider.
+</p>
+</div>
+
+<div class="cards">
+
+<div class="card" onclick="openModal('supportModal')">
+<div class="icon-wrap">
+<i class="fa-solid fa-headset"></i>
+</div>
+<h3>Assistance personnalisée</h3>
+<p>
+Un accompagnement personnalisé pendant toute votre formation.
+</p>
+<a href="javascript:void(0)" class="card-link">
+En savoir plus <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+
+<div class="card" onclick="openModal('clientModal')">
+<div class="icon-wrap">
+<i class="fa-solid fa-users"></i>
+</div>
+<h3>Trouver des clients</h3>
+<p>
+Découvrez les meilleures méthodes pour trouver vos premiers clients.
+</p>
+<a href="javascript:void(0)" class="card-link">
+En savoir plus <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- STATISTIQUES -->
+
+<section class="stats-section">
+
+<div class="section-heading">
+<span class="section-tag">DIGITTECH EN CHIFFRES</span>
+<h2>Une communauté tournée vers le digital.</h2>
+</div>
+
+<div class="stats">
+
+<div>
+<h1>500+</h1>
+<p>Membres</p>
+</div>
+
+<div>
+<h1>1000+</h1>
+<p>Prompts IA</p>
+</div>
+
+<div>
+<h1>50+</h1>
+<p>Modules</p>
+</div>
+
+<div>
+<h1>24/7</h1>
+<p>Assistance</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- APPEL À L'ACTION -->
+
+<section class="community-section">
+
+<div class="community-content">
+
+<span class="section-tag">REJOIGNEZ-NOUS</span>
+
+<h2>Prêt à développer vos compétences digitales ?</h2>
+
+<p>
+Rejoignez notre communauté pour recevoir les nouveautés, les offres et les prochaines formations.
 </p>
 
 <a class="btn"
-
 href="https://chat.whatsapp.com/JlaxVI8kq6m8McZjeliCpW?s=cl&p=a&mlu=4&ilr=4&iam=0"
-
-target="_blank">
-
- Rejoindre le Groupe d'Annonce
-
+target="_blank" rel="noopener">
+<i class="fa-brands fa-whatsapp"></i>
+Rejoindre le Groupe d'Annonce
 </a>
 
 </div>
 
 </section>
 
-<!-- ================= DESCRIPTION ================= -->
+</main>
 
-<section>
-
-<h2>Pourquoi choisir DigitTech ?</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<i class="fa-solid fa-graduation-cap"></i>
-
-<h3>Formation pratique</h3>
-
-<p>
-
-Des formations simples, concrètes et accessibles même aux débutants.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-robot"></i>
-
-<h3>Intelligence Artificielle</h3>
-
-<p>
-
-Apprenez les meilleurs outils IA utilisés aujourd'hui.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-chart-line"></i>
-
-<h3>Compétences rentables</h3>
-
-<p>
-
-Transformez vos compétences en véritables opportunités de revenus.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= SERVICES ================= -->
-
-<section>
-
-<h2>Nos accompagnements</h2>
-
-<div class="cards">
-
-<div class="card"
-onclick="openModal('supportModal')">
-
-<i class="fa-solid fa-headset"></i>
-
-<h3>Assistance</h3>
-
-<p>
-
-Un accompagnement personnalisé pendant toute votre formation.
-
-</p>
-
-</div>
-
-<div class="card"
-onclick="openModal('clientModal')">
-
-<i class="fa-solid fa-users"></i>
-
-<h3>Trouver des clients</h3>
-
-<p>
-
-Découvrez les meilleures méthodes pour trouver rapidement vos premiers clients.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= STATS ================= -->
-
-<section class="stats">
-
-<div>
-
-<h1>500+</h1>
-
-<p>Membres</p>
-
-</div>
-
-<div>
-
-<h1>1000+</h1>
-
-<p>Prompts IA</p>
-
-</div>
-
-<div>
-
-<h1>50+</h1>
-
-<p>Modules</p>
-
-</div>
-
-<div>
-
-<h1>24/7</h1>
-
-<p>Assistance</p>
-
-</div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
-<h2> Rejoignez notre communauté</h2>
+<div class="footer-content">
 
+<div class="footer-brand">
+<img src="logo.png" alt="DigitTech">
+<h2>DigitTech<span>.</span></h2>
+<p>Apprendre. Créer. Réussir.</p>
+</div>
+
+<div class="footer-description">
 <p>
-
-Recevez gratuitement toutes les nouveautés, les offres et les prochaines formations.
-
+Développez vos compétences en intelligence artificielle, création de contenu et technologies digitales avec DigitTech.
 </p>
+</div>
 
-<a class="btn"
+<div class="footer-links">
+<a href="index.html">Accueil</a>
+<a href="formation.html">Formations</a>
+<a href="groupe-vip.html">Groupe VIP</a>
+<a href="contact.html">Contact</a>
+</div>
 
-href="https://chat.whatsapp.com/JlaxVI8kq6m8McZjeliCpW?s=cl&p=a&mlu=4&ilr=4&iam=0"
-
-target="_blank">
-
- Rejoindre le Groupe d'Annonce
-
-</a>
+</div>
 
 <p class="copy">
-
-© 2026 DigitTech • Tous droits réservés
-
+© 2026 DigitTech — Tous droits réservés.
 </p>
 
 </footer>
 
-<!-- Bouton WhatsApp -->
+<!-- WHATSAPP FLOTTANT -->
 
 <a class="floating"
-
 href="https://chat.whatsapp.com/JlaxVI8kq6m8McZjeliCpW?s=cl&p=a&mlu=4&ilr=4&iam=0"
-
-target="_blank">
+target="_blank" rel="noopener"
+aria-label="Rejoindre DigitTech sur WhatsApp">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 </a>
 
-<!-- SCRIPT -->
-
 <script src="script.js"></script>
 
 </body>
-
 </html>
