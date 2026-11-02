@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,23 +6,339 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#174EA6">
 
 <title>Preuves | DigitTech</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+<style>
+
+/* ================= PAGE PREUVES ================= */
+
+.proof-section {
+    padding: 70px 6%;
+    background: #F7F9FC;
+}
+
+.proof-section:nth-of-type(even) {
+    background: #FFFFFF;
+}
+
+.proof-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.proof-heading h2 {
+    color: #102F68;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.proof-heading p {
+    max-width: 680px;
+    margin: auto;
+    color: #66758B;
+    line-height: 1.8;
+}
+
+/* ================= HERO ================= */
+
+.proof-label {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #EAF2FF;
+    color: #174EA6;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* ================= VIDEOS ================= */
+
+.proof-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.proof-video-card {
+    background: #FFFFFF;
+    border: 1px solid #E6EBF2;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 5px 20px rgba(16,47,104,0.05);
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.proof-video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(16,47,104,0.10);
+}
+
+.proof-video-card video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    background: #101828;
+    border-radius: 12px;
+}
+
+.proof-video-card h3 {
+    color: #18253B;
+    font-size: 17px;
+    margin: 17px 5px 7px;
+}
+
+.proof-video-card p {
+    color: #66758B;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 5px 8px;
+}
+
+/* ================= GALERIE ================= */
+
+.proof-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.proof-gallery-item {
+    background: #FFFFFF;
+    padding: 10px;
+    border: 1px solid #E6EBF2;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(16,47,104,0.05);
+    overflow: hidden;
+}
+
+.proof-gallery img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #F5F8FD;
+    transition: 0.3s ease;
+}
+
+.proof-gallery-item:hover img {
+    transform: scale(1.025);
+}
+
+/* ================= ETAPES ================= */
+
+.proof-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.proof-step {
+    background: #FFFFFF;
+    border: 1px solid #E6EBF2;
+    border-radius: 18px;
+    padding: 27px 23px;
+    box-shadow: 0 5px 20px rgba(16,47,104,0.04);
+    transition: 0.3s ease;
+}
+
+.proof-step:hover {
+    transform: translateY(-5px);
+    border-color: #3979E8;
+    box-shadow: 0 10px 25px rgba(16,47,104,0.08);
+}
+
+.proof-step-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAF2FF;
+    color: #174EA6;
+    border-radius: 16px;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.proof-step h3 {
+    color: #18253B;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.proof-step p {
+    color: #66758B;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ================= INSCRIPTION ================= */
+
+.proof-cta {
+    text-align: center;
+    padding: 70px 6%;
+    background: #FFFFFF;
+}
+
+.proof-cta h2 {
+    color: #102F68;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.proof-cta p {
+    color: #66758B;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.proof-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: #174EA6;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.proof-cta .btn:hover {
+    background: #102F68;
+    transform: translateY(-3px);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #102F68;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 55px 6% 25px;
+}
+
+footer h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #DCE7F8;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+footer .btn {
+    display: inline-block;
+    background: #FFFFFF;
+    color: #174EA6;
+    padding: 13px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+footer .copy {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 20px;
+    margin: 15px auto 0;
+    font-size: 13px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+    .proof-section {
+        padding: 50px 5%;
+    }
+
+    .proof-heading h2 {
+        font-size: 23px;
+    }
+
+    .proof-videos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .proof-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .proof-gallery img {
+        height: 190px;
+    }
+
+    .proof-steps {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .proof-step {
+        padding: 23px 20px;
+    }
+
+    .proof-cta {
+        padding: 50px 5%;
+    }
+
+    .proof-cta h2 {
+        font-size: 23px;
+    }
+
+    footer h2 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .proof-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .proof-gallery img {
+        height: 260px;
+    }
+
+}
+
+</style>
+
 </head>
 
 <body>
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -29,11 +346,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <div class="left-part">
 
-<button class="menu-btn" onclick="toggleMenu()">
-☰
+<button class="menu-btn"
+onclick="toggleMenu()"
+aria-label="Ouvrir le menu">
+
+<i class="fa-solid fa-bars"></i>
+
 </button>
 
-<img src="logo.png" class="logo-img" alt="Logo">
+<img src="logo.png"
+class="logo-img"
+alt="Logo DigitTech">
 
 <div class="logo-text">
 DigitTech
@@ -47,33 +370,55 @@ DigitTech
 
 <div id="sideMenu" class="side-menu">
 
-<a href="index.html"> Accueil</a>
+<a href="index.html">
+<i class="fa-solid fa-house"></i> Accueil
+</a>
 
-<a href="formation.html"> Formation</a>
+<a href="formation.html">
+<i class="fa-solid fa-graduation-cap"></i> Formation
+</a>
 
-<a href="groupe-vip.html"> Groupe VIP</a>
+<a href="groupe-vip.html">
+<i class="fa-solid fa-users"></i> Groupe VIP
+</a>
 
-<a href="preuves.html"> Preuves</a>
+<a href="preuves.html">
+<i class="fa-solid fa-circle-check"></i> Preuves
+</a>
 
-<a href="avis.html"> Avis</a>
+<a href="avis.html">
+<i class="fa-solid fa-star"></i> Avis
+</a>
 
-<a href="bonus.html"> Bonus</a>
+<a href="bonus.html">
+<i class="fa-solid fa-gift"></i> Bonus
+</a>
 
-<a href="faq.html"> FAQ</a>
+<a href="faq.html">
+<i class="fa-solid fa-circle-question"></i> FAQ
+</a>
 
-<a href="contact.html"> Contact</a>
+<a href="contact.html">
+<i class="fa-solid fa-envelope"></i> Contact
+</a>
 
 </div>
 
 </header>
 
+<!-- ================= HERO ================= -->
+
 <section class="hero">
 
 <div class="overlay">
 
-<h1>📹 Preuves de nos formations</h1>
+<span class="proof-label">
+TRANSPARENCE & ACCOMPAGNEMENT
+</span>
 
-<h2>Des résultats concrets</h2>
+<h1>Preuves de nos formations</h1>
+
+<h2>Des exemples concrets de notre accompagnement</h2>
 
 <p>
 
@@ -89,41 +434,58 @@ Notre priorité est d'offrir un accompagnement sérieux à chaque participant.
 
 <!-- ================= VIDEOS ================= -->
 
-<section>
+<section class="proof-section">
 
-<h2>🎬 Vidéos de preuves</h2>
+<div class="proof-heading">
 
-<div class="cards">
+<h2>Vidéos de preuves</h2>
 
-    <div class="card">
-        <video controls>
-            <source src="recep.mp4" type="video/mp4">
-        </video>
+<p>
+Découvrez des exemples de réception des supports, d'intégration au Groupe VIP et d'accompagnement des participants.
+</p>
 
-        <h3>Participant 1</h3>
+</div>
 
-        <p>Réception du support de formation.</p>
-    </div>
+<div class="proof-videos">
 
-    <div class="card">
-        <video controls>
-            <source src="integra.mp4" type="video/mp4">
-        </video>
+<div class="proof-video-card">
 
-        <h3>Participant 2</h3>
+<video controls preload="metadata">
+<source src="recep.mp4" type="video/mp4">
+Votre navigateur ne prend pas en charge la lecture vidéo.
+</video>
 
-        <p>Intégration dans le Groupe VIP.</p>
-    </div>
+<h3>Participant 1</h3>
 
-    <div class="card">
-        <video controls>
-            <source src="accompagnement.mp4" type="video/mp4">
-        </video>
+<p>Réception du support de formation.</p>
 
-        <h3>Participant 3</h3>
+</div>
 
-        <p>Accompagnement après inscription.</p>
-    </div>
+<div class="proof-video-card">
+
+<video controls preload="metadata">
+<source src="integra.mp4" type="video/mp4">
+Votre navigateur ne prend pas en charge la lecture vidéo.
+</video>
+
+<h3>Participant 2</h3>
+
+<p>Intégration dans le Groupe VIP.</p>
+
+</div>
+
+<div class="proof-video-card">
+
+<video controls preload="metadata">
+<source src="accompagnement.mp4" type="video/mp4">
+Votre navigateur ne prend pas en charge la lecture vidéo.
+</video>
+
+<h3>Participant 3</h3>
+
+<p>Accompagnement après inscription.</p>
+
+</div>
 
 </div>
 
@@ -131,19 +493,35 @@ Notre priorité est d'offrir un accompagnement sérieux à chaque participant.
 
 <!-- ================= CAPTURES ================= -->
 
-<section>
+<section class="proof-section">
 
-<h2>📸 Captures d'écran</h2>
+<div class="proof-heading">
 
-<div class="gallery">
+<h2>Captures d'écran</h2>
 
-<img src="preuve1.jpg" alt="Preuve 1">
+<p>
+Quelques illustrations de nos échanges et du suivi des participants.
+</p>
 
-<img src="preuve2.jpg" alt="Preuve 2">
+</div>
 
-<img src="preuve3.jpg" alt="Preuve 3">
+<div class="proof-gallery">
 
-<img src="part2.jpg" alt="Preuve 4">
+<div class="proof-gallery-item">
+<img src="preuve1.jpg" alt="Capture de preuve 1" loading="lazy">
+</div>
+
+<div class="proof-gallery-item">
+<img src="preuve2.jpg" alt="Capture de preuve 2" loading="lazy">
+</div>
+
+<div class="proof-gallery-item">
+<img src="preuve3.jpg" alt="Capture de preuve 3" loading="lazy">
+</div>
+
+<div class="proof-gallery-item">
+<img src="part2.jpg" alt="Capture de preuve 4" loading="lazy">
+</div>
 
 </div>
 
@@ -151,65 +529,72 @@ Notre priorité est d'offrir un accompagnement sérieux à chaque participant.
 
 <!-- ================= ETAPES ================= -->
 
+<section class="proof-section">
 
-<section>
+<div class="proof-heading">
 
-<h2>📌 Comment ça fonctionne ?</h2>
+<h2>Comment ça fonctionne ?</h2>
 
-<div class="cards">
+<p>
+Voici les principales étapes pour accéder à une formation DigitTech.
+</p>
 
-<div class="card">
+</div>
 
+<div class="proof-steps">
+
+<div class="proof-step">
+
+<div class="proof-step-icon">
 <i class="fa-solid fa-users"></i>
+</div>
 
 <h3>1. Groupe d'Annonce</h3>
 
 <p>
-
-Rejoignez gratuitement notre groupe d'annonces WhatsApp.
-
+Rejoignez gratuitement notre groupe d'annonces WhatsApp pour suivre les informations sur nos formations.
 </p>
 
 </div>
 
-<div class="card">
+<div class="proof-step">
 
+<div class="proof-step-icon">
 <i class="fa-solid fa-comments"></i>
+</div>
 
 <h3>2. Contact privé</h3>
 
 <p>
-
-Écrivez à l'administrateur pour recevoir les informations d'inscription.
-
+Écrivez à l'administrateur pour recevoir les informations et les modalités d'inscription.
 </p>
 
 </div>
 
-<div class="card">
+<div class="proof-step">
 
+<div class="proof-step-icon">
 <i class="fa-solid fa-credit-card"></i>
+</div>
 
 <h3>3. Validation</h3>
 
 <p>
-
-Après validation, vous recevez les supports de formation.
-
+Après validation de votre inscription, vous recevez les supports de formation.
 </p>
 
 </div>
 
-<div class="card">
+<div class="proof-step">
 
+<div class="proof-step-icon">
 <i class="fa-solid fa-lock"></i>
+</div>
 
 <h3>4. Groupe VIP</h3>
 
 <p>
-
-Vous êtes ajouté au Groupe VIP et bénéficiez de l'accompagnement.
-
+Vous êtes ajouté au Groupe VIP et bénéficiez de l'accompagnement prévu dans votre formation.
 </p>
 
 </div>
@@ -220,65 +605,61 @@ Vous êtes ajouté au Groupe VIP et bénéficiez de l'accompagnement.
 
 <!-- ================= BOUTON ================= -->
 
-<section style="text-align:center;">
+<section class="proof-cta">
 
-<h2> Rejoignez la prochaine session</h2>
+<h2>Rejoignez la prochaine session</h2>
 
 <p>
-
-Vous souhaitez bénéficier des mêmes avantages ?
-
+Vous souhaitez bénéficier du même accompagnement ?
+<br>
 Inscrivez-vous dès aujourd'hui.
-
 </p>
 
-<br>
-
 <a class="btn"
-
 href="https://wa.me/22657420577?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20m'inscrire%20à%20une%20formation.%20Merci%20de%20m'indiquer%20la%20procédure."
+target="_blank"
+rel="noopener noreferrer">
 
-target="_blank">
-
-📲 S'inscrire
+<i class="fa-brands fa-whatsapp"></i>
+S'inscrire
 
 </a>
 
 </section>
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-<h2>Merci pour votre confiance ❤️</h2>
+<h2>Merci pour votre confiance</h2>
 
 <p>
-
-DigitTech accompagne chaque participant jusqu'à sa réussite.
-
+DigitTech accompagne chaque participant dans son apprentissage et le développement de ses compétences numériques.
 </p>
 
 <a class="btn"
-
 href="https://chat.whatsapp.com/JlaxVI8kq6m8McZjeliCpW?s=cl&p=a&mlu=4&ilr=4&iam=0"
+target="_blank"
+rel="noopener noreferrer">
 
-target="_blank">
-
- Rejoindre le Groupe d'Annonce
+<i class="fa-brands fa-whatsapp"></i>
+Rejoindre le Groupe d'Annonce
 
 </a>
 
 <p class="copy">
-
 © 2026 DigitTech • Tous droits réservés
-
 </p>
 
 </footer>
 
+<!-- ================= WHATSAPP FLOTTANT ================= -->
+
 <a class="floating"
-
 href="https://chat.whatsapp.com/JlaxVI8kq6m8McZjeliCpW?s=cl&p=a&mlu=4&ilr=4&iam=0"
-
-target="_blank">
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Rejoindre le Groupe d'Annonce WhatsApp">
 
 <i class="fa-brands fa-whatsapp"></i>
 
