@@ -1,288 +1,680 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bonus | DigitTech</title>
+  <meta name="theme-color" content="#102F68">
+  <meta name="description" content="Découvrez les bonus et avantages proposés aux membres des formations DigitTech.">
 
-<link rel="stylesheet" href="style.css">
+  <title>Bonus | DigitTech</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+
+    /* ================= BONUS ================= */
+
+    .bonus-section {
+      padding: 75px 7%;
+      background: var(--background);
+    }
+
+    .bonus-heading {
+      max-width: 720px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .bonus-label {
+      display: inline-block;
+      padding: 8px 17px;
+      border-radius: 30px;
+      background: #eaf1ff;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .bonus-heading h2 {
+      color: var(--text);
+      font-size: clamp(25px, 4vw, 36px);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .bonus-heading p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .bonus-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: 0 8px 25px rgba(20, 50, 90, 0.04);
+      transition: 0.3s ease;
+    }
+
+    .bonus-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 30px rgba(20, 50, 90, 0.09);
+      border-color: #cbdaf4;
+    }
+
+    .bonus-icon {
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eaf1ff;
+      color: var(--primary);
+      border-radius: 16px;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .bonus-card h3 {
+      color: var(--text);
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .bonus-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+      margin: 0;
+    }
+
+    .bonus-number {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* ================= STATISTIQUES ================= */
+
+    .bonus-stats-section {
+      padding: 75px 7%;
+      background: var(--surface);
+    }
+
+    .bonus-stats-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .bonus-stats-heading h2 {
+      color: var(--text);
+      font-size: clamp(25px, 4vw, 34px);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .bonus-stats-heading p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .bonus-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .bonus-stat {
+      text-align: center;
+      padding: 27px 15px;
+      background: var(--background);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .bonus-stat-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eaf1ff;
+      color: var(--primary);
+      border-radius: 14px;
+      font-size: 20px;
+    }
+
+    .bonus-stat h3 {
+      color: var(--primary);
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .bonus-stat p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* ================= INSCRIPTION ================= */
+
+    .bonus-cta {
+      padding: 75px 7%;
+      background: var(--background);
+      text-align: center;
+    }
+
+    .bonus-cta-content {
+      max-width: 780px;
+      margin: auto;
+      padding: 48px 25px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #174EA6, #102F68);
+      color: white;
+    }
+
+    .bonus-cta-icon {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .bonus-cta-content h2 {
+      font-size: clamp(23px, 4vw, 32px);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .bonus-cta-content p {
+      color: rgba(255,255,255,0.85);
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 580px;
+      margin: 0 auto 25px;
+    }
+
+    .bonus-cta-content .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 9px;
+      background: white;
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .bonus-cta-content .btn:hover {
+      background: #eaf1ff;
+      transform: translateY(-3px);
+    }
+
+    /* ================= FOOTER ================= */
+
+    .bonus-footer {
+      padding: 45px 7% 20px;
+      background: var(--primary-dark);
+      color: white;
+      text-align: center;
+    }
+
+    .bonus-footer h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .bonus-footer > p {
+      max-width: 650px;
+      margin: 0 auto 22px;
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .bonus-footer .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 22px;
+      border-radius: 8px;
+      background: white;
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .bonus-footer .btn:hover {
+      background: #eaf1ff;
+      transform: translateY(-2px);
+    }
+
+    .bonus-footer .copy {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      margin-top: 35px;
+      padding-top: 20px;
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 900px) {
+
+      .bonus-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .bonus-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 550px) {
+
+      .bonus-section,
+      .bonus-stats-section,
+      .bonus-cta {
+        padding: 55px 5%;
+      }
+
+      .bonus-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .bonus-card {
+        padding: 24px 21px;
+      }
+
+      .bonus-stats {
+        gap: 12px;
+      }
+
+      .bonus-stat {
+        padding: 22px 10px;
+      }
+
+      .bonus-stat h3 {
+        font-size: 25px;
+      }
+
+      .bonus-cta-content {
+        padding: 35px 20px;
+      }
+
+    }
+
+  </style>
 
 </head>
 
 <body>
 
-<header>
+  <!-- ================= HEADER ================= -->
 
-<nav class="navbar">
+  <header>
 
-<div class="left-part">
+    <nav class="navbar">
 
-<button class="menu-btn" onclick="toggleMenu()">
-☰
-</button>
+      <div class="left-part">
 
-<img src="logo.png" class="logo-img" alt="Logo DigitTech">
+        <button class="menu-btn"
+        onclick="toggleMenu()"
+        aria-label="Ouvrir le menu">
 
-<div class="logo-text">
-DigitTech
-</div>
+          <i class="fa-solid fa-bars"></i>
 
-</div>
+        </button>
 
-</nav>
+        <img src="logo.png" class="logo-img" alt="Logo DigitTech">
 
-<div id="sideMenu" class="side-menu">
+        <div class="logo-text">
+          DigitTech
+        </div>
 
-<a href="index.html"> Accueil</a>
+      </div>
 
-<a href="formation.html"> Formation</a>
+    </nav>
 
-<a href="groupe-vip.html"> Groupe VIP</a>
+    <!-- MENU LATÉRAL -->
 
-<a href="preuves.html"> Preuves</a>
+    <div id="sideMenu" class="side-menu">
 
-<a href="avis.html"> Avis</a>
+      <a href="index.html">Accueil</a>
+      <a href="formation.html">Formation</a>
+      <a href="groupe-vip.html">Groupe VIP</a>
+      <a href="preuves.html">Preuves</a>
+      <a href="avis.html">Avis</a>
+      <a href="bonus.html">Bonus</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
 
-<a href="bonus.html"> Bonus</a>
+    </div>
 
-<a href="faq.html"> FAQ</a>
+  </header>
 
-<a href="contact.html"> Contact</a>
+  <!-- ================= HERO ================= -->
 
-</div>
+  <section class="hero">
 
-</header>
+    <div class="overlay">
 
-<section class="hero">
+      <h1>Bonus offerts</h1>
 
-<div class="overlay">
+      <h2>Encore plus de valeur avec DigitTech</h2>
 
-<h1>🎁 Bonus Offerts</h1>
+      <p>
+        En rejoignant une formation DigitTech, vous bénéficiez
+        de plusieurs bonus pour accélérer votre apprentissage.
+      </p>
 
-<h2>Encore plus de valeur avec DigitTech</h2>
+    </div>
 
-<p>
+  </section>
 
-En rejoignant une formation DigitTech, vous bénéficiez de plusieurs bonus pour accélérer votre apprentissage.
+  <!-- ================= VOS BONUS ================= -->
 
-</p>
+  <section class="bonus-section">
 
-</div>
+    <div class="bonus-heading">
 
-</section>
+      <span class="bonus-label">
+        <i class="fa-solid fa-gift"></i> Vos avantages
+      </span>
 
-<section>
+      <h2>Découvrez vos bonus</h2>
 
-<h2>🎁 Vos Bonus</h2>
+      <p>
+        Nous souhaitons vous offrir les ressources et l'accompagnement
+        nécessaires pour progresser dans le domaine du digital et de l'IA.
+      </p>
 
-<div class="cards">
+    </div>
 
-<div class="card">
+    <div class="bonus-grid">
 
-<i class="fa-solid fa-file-code"></i>
+      <article class="bonus-card">
 
-<h3>500 Prompts IA</h3>
+        <div class="bonus-icon">
+          <i class="fa-solid fa-file-code"></i>
+        </div>
 
-<p>
+        <h3>500 Prompts IA</h3>
 
-Recevez plus de 500 prompts professionnels pour créer des images, vidéos, musiques, affiches, logos et contenus avec l'Intelligence Artificielle.
+        <p>
+          Recevez plus de 500 prompts professionnels pour créer
+          des images, vidéos, musiques, affiches, logos et contenus
+          avec l'Intelligence Artificielle.
+        </p>
 
-</p>
+        <span class="bonus-number">01 — Ressources IA</span>
 
-</div>
+      </article>
 
-<div class="card">
+      <article class="bonus-card">
 
-<i class="fa-brands fa-telegram"></i>
+        <div class="bonus-icon">
+          <i class="fa-brands fa-telegram"></i>
+        </div>
 
-<h3>Compte Telegram offert</h3>
+        <h3>Compte Telegram offert</h3>
 
-<p>
+        <p>
+          Recevez gratuitement un compte Telegram prêt à l'emploi
+          afin de profiter des fonctionnalités de la plateforme
+          et faciliter vos échanges.
+        </p>
 
-Recevez gratuitement un compte Telegram prêt à l'emploi afin de profiter des fonctionnalités de la plateforme et faciliter vos échanges.
+        <span class="bonus-number">02 — Compte offert</span>
 
-</p>
+      </article>
 
-</div>
+      <article class="bonus-card">
 
-<div class="card">
+        <div class="bonus-icon">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
 
-<i class="fa-solid fa-book"></i>
+        <h3>Support de formation</h3>
 
-<h3>Support de formation</h3>
+        <p>
+          Après votre inscription, vous recevez votre support
+          de formation pour apprendre étape par étape et retrouver
+          les notions essentielles.
+        </p>
 
-<p>
+        <span class="bonus-number">03 — Support pédagogique</span>
 
-Après votre inscription, vous recevez votre support de formation pour apprendre étape par étape.
+      </article>
 
-</p>
+      <article class="bonus-card">
 
-</div>
+        <div class="bonus-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
 
-<div class="card">
+        <h3>Accès au Groupe VIP</h3>
 
-<i class="fa-solid fa-users"></i>
+        <p>
+          Vous êtes ajouté au Groupe VIP afin de suivre la formation,
+          poser vos questions et échanger avec les autres membres.
+        </p>
 
-<h3>Accès au Groupe VIP</h3>
+        <span class="bonus-number">04 — Communauté privée</span>
 
-<p>
+      </article>
 
-Vous êtes ajouté au Groupe VIP afin de suivre la formation, poser vos questions et échanger avec les autres membres.
+      <article class="bonus-card">
 
-</p>
+        <div class="bonus-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
 
-</div>
+        <h3>Assistance</h3>
 
-<div class="card">
+        <p>
+          Nous vous accompagnons tout au long de votre apprentissage
+          afin de répondre à vos questions et vous aider à avancer.
+        </p>
 
-<i class="fa-solid fa-headset"></i>
+        <span class="bonus-number">05 — Aide et assistance</span>
 
-<h3>Assistance</h3>
+      </article>
 
-<p>
+      <article class="bonus-card">
 
-Nous vous accompagnons tout au long de votre apprentissage afin de répondre à vos questions.
+        <div class="bonus-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
 
-</p>
+        <h3>Accompagnement</h3>
 
-</div>
+        <p>
+          Bénéficiez de conseils pratiques pour appliquer
+          les notions apprises et progresser sereinement
+          dans vos projets digitaux.
+        </p>
 
-<div class="card">
+        <span class="bonus-number">06 — Suivi pédagogique</span>
 
-<i class="fa-solid fa-graduation-cap"></i>
+      </article>
 
-<h3>Accompagnement</h3>
+    </div>
 
-<p>
+  </section>
 
-Des conseils pratiques pour appliquer les notions apprises et progresser sereinement.
+  <!-- ================= STATISTIQUES ================= -->
 
-</p>
+  <section class="bonus-stats-section">
 
-</div>
+    <div class="bonus-stats-heading">
 
-</div>
+      <h2>Ce que vous obtenez</h2>
 
-</section>
+      <p>
+        Des ressources et un accompagnement pour enrichir votre expérience.
+      </p>
 
-<section>
+    </div>
 
-<h2>📊 Ce que vous obtenez</h2>
+    <div class="bonus-stats">
 
-<div class="stats">
+      <div class="bonus-stat">
 
-<div>
+        <div class="bonus-stat-icon">
+          <i class="fa-solid fa-file-code"></i>
+        </div>
 
-<h1>500+</h1>
+        <h3>500+</h3>
+        <p>Prompts IA</p>
 
-<p>Prompts IA</p>
+      </div>
 
-</div>
+      <div class="bonus-stat">
 
-<div>
+        <div class="bonus-stat-icon">
+          <i class="fa-solid fa-gift"></i>
+        </div>
 
-<h1>6</h1>
+        <h3>6</h3>
+        <p>Bonus</p>
 
-<p>Bonus</p>
+      </div>
 
-</div>
+      <div class="bonus-stat">
 
-<div>
+        <div class="bonus-stat-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
 
-<h1>1</h1>
+        <h3>1</h3>
+        <p>Groupe VIP</p>
 
-<p>Groupe VIP</p>
+      </div>
 
-</div>
+      <div class="bonus-stat">
 
-<div>
+        <div class="bonus-stat-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
 
-<h1>24/7</h1>
+        <h3>24/7</h3>
+        <p>Assistance</p>
 
-<p>Assistance</p>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </section>
 
-</section>
+  <!-- ================= INSCRIPTION ================= -->
 
-<section style="text-align:center;">
+  <section class="bonus-cta">
 
-<h2> Profitez de tous ces bonus</h2>
+    <div class="bonus-cta-content">
 
-<p>
+      <div class="bonus-cta-icon">
+        <i class="fa-solid fa-rocket"></i>
+      </div>
 
-Inscrivez-vous dès maintenant pour accéder à votre formation et recevoir tous les bonus.
+      <h2>Profitez de tous ces bonus</h2>
 
-</p>
+      <p>
+        Inscrivez-vous dès maintenant pour accéder à votre formation
+        et bénéficier de tous les bonus proposés par DigitTech.
+      </p>
 
-<br>
+      <a class="btn"
+      href="https://wa.me/22657420577?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20m'inscrire%20%C3%A0%20une%20formation.%20Merci%20de%20m'indiquer%20la%20proc%C3%A9dure."
+      target="_blank"
+      rel="noopener noreferrer">
 
-<a class="btn"
+        <i class="fa-brands fa-whatsapp"></i>
+        S'inscrire maintenant
 
-href="https://wa.me/22657420577?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20m'inscrire%20à%20une%20formation.%20Merci%20de%20m'indiquer%20la%20procédure."
+      </a>
 
-target="_blank">
+    </div>
 
- S'inscrire
+  </section>
 
-</a>
+  <!-- ================= FOOTER ================= -->
 
-</section>
+  <footer class="bonus-footer">
 
-<footer>
+    <h2>Merci pour votre confiance</h2>
 
-<h2>🎉 Merci pour votre confiance</h2>
+    <p>
+      DigitTech vous accompagne vers la maîtrise des outils
+      d'Intelligence Artificielle et des compétences digitales.
+    </p>
 
-<p>
+    <a class="btn"
+    href="https://chat.whatsapp.com/JlaxVI8kq6m8McZjeliCpW?s=cl&p=a&mlu=4&ilr=4&iam=0"
+    target="_blank"
+    rel="noopener noreferrer">
 
-DigitTech vous accompagne vers la maîtrise des outils d'Intelligence Artificielle.
+      <i class="fa-brands fa-whatsapp"></i>
+      Rejoindre le Groupe d'Annonce
 
-</p>
+    </a>
 
-<a class="btn"
+    <p class="copy">
+      © 2026 DigitTech • Tous droits réservés
+    </p>
 
-href="https://chat.whatsapp.com/JlaxVI8kq6m8McZjeliCpW?s=cl&p=a&mlu=4&ilr=4&iam=0"
+  </footer>
 
-target="_blank">
+  <!-- ================= WHATSAPP FLOTTANT ================= -->
 
- Rejoindre le Groupe d'Annonce
+  <a class="floating"
+  href="https://chat.whatsapp.com/JlaxVI8kq6m8McZjeliCpW?s=cl&p=a&mlu=4&ilr=4&iam=0"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Rejoindre DigitTech sur WhatsApp">
 
-</a>
+    <i class="fa-brands fa-whatsapp"></i>
 
-<p class="copy">
+  </a>
 
-© 2026 DigitTech • Tous droits réservés
-
-</p>
-
-</footer>
-
-<a class="floating"
-
-href="https://chat.whatsapp.com/JlaxVI8kq6m8McZjeliCpW?s=cl&p=a&mlu=4&ilr=4&iam=0"
-
-target="_blank">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-</a>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
-
 </html>
