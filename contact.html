@@ -1,294 +1,789 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact | DigitTech</title>
+  <meta name="theme-color" content="#102F68">
+  <meta name="description" content="Contactez DigitTech pour obtenir des informations sur nos formations digitales, les inscriptions et l'accompagnement.">
 
-<link rel="stylesheet" href="style.css">
+  <title>Contact | DigitTech</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+
+    /* ================= CONTACT ================= */
+
+    .contact-section {
+      padding: 75px 7%;
+      background: var(--background);
+    }
+
+    .contact-heading {
+      max-width: 720px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .contact-label {
+      display: inline-block;
+      padding: 8px 17px;
+      border-radius: 30px;
+      background: #eaf1ff;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .contact-heading h2 {
+      color: var(--text);
+      font-size: clamp(25px, 4vw, 36px);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .contact-heading p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: 0 8px 25px rgba(20, 50, 90, 0.04);
+      transition: 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(20, 50, 90, 0.09);
+      border-color: #cbdaf4;
+    }
+
+    .contact-icon {
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eaf1ff;
+      color: var(--primary);
+      border-radius: 16px;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .contact-card h3 {
+      color: var(--text);
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+      margin: 0 0 22px;
+      flex-grow: 1;
+    }
+
+    .contact-card .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 17px;
+      border-radius: 8px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .contact-card .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .contact-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 30px;
+      background: #eaf1ff;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .contact-status i {
+      font-size: 9px;
+    }
+
+    /* ================= POURQUOI CONTACTER ================= */
+
+    .why-contact-section {
+      padding: 75px 7%;
+      background: var(--surface);
+    }
+
+    .why-contact-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .why-contact-heading h2 {
+      color: var(--text);
+      font-size: clamp(25px, 4vw, 34px);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .why-contact-heading p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .why-contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .why-contact-card {
+      padding: 27px 23px;
+      background: var(--background);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: 0.3s;
+    }
+
+    .why-contact-card:hover {
+      transform: translateY(-4px);
+      border-color: #cbdaf4;
+    }
+
+    .why-contact-card .why-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: #eaf1ff;
+      color: var(--primary);
+      font-size: 20px;
+      margin-bottom: 17px;
+    }
+
+    .why-contact-card h3 {
+      color: var(--text);
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .why-contact-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* ================= STATISTIQUES ================= */
+
+    .contact-stats-section {
+      padding: 65px 7%;
+      background: var(--background);
+    }
+
+    .contact-stats-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .contact-stats-heading h2 {
+      color: var(--text);
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 800;
+    }
+
+    .contact-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .contact-stat {
+      text-align: center;
+      padding: 25px 15px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .contact-stat h3 {
+      color: var(--primary);
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .contact-stat p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* ================= APPEL FINAL ================= */
+
+    .contact-cta {
+      padding: 70px 7%;
+      background: var(--surface);
+      text-align: center;
+    }
+
+    .contact-cta-content {
+      max-width: 780px;
+      margin: auto;
+      padding: 45px 25px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #174EA6, #102F68);
+      color: white;
+    }
+
+    .contact-cta-content .cta-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .contact-cta-content h2 {
+      font-size: clamp(23px, 4vw, 32px);
+      font-weight: 800;
+      margin-bottom: 13px;
+    }
+
+    .contact-cta-content p {
+      max-width: 580px;
+      margin: 0 auto 25px;
+      color: rgba(255,255,255,0.85);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .contact-cta-content .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 25px;
+      border-radius: 9px;
+      background: white;
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .contact-cta-content .btn:hover {
+      background: #eaf1ff;
+      transform: translateY(-3px);
+    }
+
+    /* ================= FOOTER ================= */
+
+    .contact-footer {
+      padding: 45px 7% 20px;
+      background: var(--primary-dark);
+      color: white;
+      text-align: center;
+    }
+
+    .contact-footer h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .contact-footer > p {
+      max-width: 650px;
+      margin: 0 auto 22px;
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .contact-footer .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 22px;
+      border-radius: 8px;
+      background: white;
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .contact-footer .btn:hover {
+      background: #eaf1ff;
+      transform: translateY(-2px);
+    }
+
+    .contact-footer .copy {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      margin-top: 35px;
+      padding-top: 20px;
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 900px) {
+
+      .contact-grid,
+      .why-contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 550px) {
+
+      .contact-section,
+      .why-contact-section,
+      .contact-stats-section,
+      .contact-cta {
+        padding: 55px 5%;
+      }
+
+      .contact-grid,
+      .why-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .contact-card,
+      .why-contact-card {
+        padding: 23px 21px;
+      }
+
+      .contact-stats {
+        gap: 12px;
+      }
+
+      .contact-stat {
+        padding: 22px 10px;
+      }
+
+      .contact-stat h3 {
+        font-size: 25px;
+      }
+
+      .contact-cta-content {
+        padding: 35px 20px;
+      }
+
+    }
+
+  </style>
 
 </head>
 
 <body>
 
-<header>
+  <!-- ================= HEADER ================= -->
 
-<nav class="navbar">
+  <header>
 
-<div class="left-part">
+    <nav class="navbar">
 
-<button class="menu-btn" onclick="toggleMenu()">
-☰
-</button>
+      <div class="left-part">
 
-<img src="logo.png" class="logo-img" alt="Logo DigitTech">
+        <button class="menu-btn"
+        onclick="toggleMenu()"
+        aria-label="Ouvrir le menu">
 
-<div class="logo-text">
-DigitTech
-</div>
+          <i class="fa-solid fa-bars"></i>
 
-</div>
+        </button>
 
-</nav>
+        <img src="logo.png" class="logo-img" alt="Logo DigitTech">
 
-<div id="sideMenu" class="side-menu">
+        <div class="logo-text">
+          DigitTech
+        </div>
 
-<a href="index.html"> Accueil</a>
+      </div>
 
-<a href="formation.html"> Formation</a>
+    </nav>
 
-<a href="groupe-vip.html"> Groupe VIP</a>
+    <!-- MENU LATÉRAL -->
 
-<a href="preuves.html"> Preuves</a>
+    <div id="sideMenu" class="side-menu">
 
-<a href="avis.html"> Avis</a>
+      <a href="index.html">Accueil</a>
+      <a href="formation.html">Formation</a>
+      <a href="groupe-vip.html">Groupe VIP</a>
+      <a href="preuves.html">Preuves</a>
+      <a href="avis.html">Avis</a>
+      <a href="bonus.html">Bonus</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
 
-<a href="bonus.html"> Bonus</a>
+    </div>
 
-<a href="faq.html"> FAQ</a>
+  </header>
 
-<a href="contact.html"> Contact</a>
+  <!-- ================= HERO ================= -->
 
-</div>
+  <section class="hero">
 
-</header>
+    <div class="overlay">
 
-<section class="hero">
+      <h1>Contactez DigitTech</h1>
 
-<div class="overlay">
+      <h2>Nous sommes à votre écoute</h2>
 
-<h1>📞 Contactez DigitTech</h1>
+      <p>
+        Une question sur une formation ? Besoin d'informations
+        avant de vous inscrire ? Contactez-nous directement via
+        WhatsApp ou rejoignez notre Groupe d'Annonce.
+      </p>
 
-<h2>Nous sommes à votre écoute</h2>
+    </div>
 
-<p>
+  </section>
 
-Une question sur une formation ? Besoin d'informations avant de vous inscrire ?
+  <!-- ================= MOYENS DE CONTACT ================= -->
 
-Contactez-nous directement via WhatsApp ou rejoignez notre Groupe d'Annonce.
+  <section class="contact-section">
 
-</p>
+    <div class="contact-heading">
 
-</div>
+      <span class="contact-label">
+        <i class="fa-solid fa-address-book"></i>
+        Restons en contact
+      </span>
 
-</section>
+      <h2>Nos moyens de contact</h2>
 
-<section>
+      <p>
+        Choisissez le moyen qui vous convient pour échanger
+        avec DigitTech et obtenir les informations dont vous avez besoin.
+      </p>
 
-<h2>Nos moyens de contact</h2>
+    </div>
 
-<div class="cards">
+    <div class="contact-grid">
 
-<div class="card">
+      <!-- WHATSAPP -->
 
-<i class="fa-brands fa-whatsapp"></i>
+      <article class="contact-card">
 
-<h3>WhatsApp</h3>
+        <div class="contact-icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
 
-<p>
+        <h3>WhatsApp</h3>
 
-Discutez directement avec l'administrateur pour toute demande d'information ou d'inscription.
+        <p>
+          Discutez directement avec l'administrateur pour toute
+          demande d'information ou d'inscription.
+        </p>
 
-</p>
+        <a class="btn"
+        href="https://wa.me/22657420577?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20formations."
+        target="_blank"
+        rel="noopener noreferrer">
 
-<br>
+          <i class="fa-brands fa-whatsapp"></i>
+          Écrire sur WhatsApp
 
-<a class="btn"
+        </a>
 
-href="https://wa.me/22657420577?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20formations."
+      </article>
 
-target="_blank">
+      <!-- GROUPE D'ANNONCE -->
 
- Écrire sur WhatsApp
+      <article class="contact-card">
 
-</a>
+        <div class="contact-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
 
-</div>
+        <h3>Groupe d'Annonce</h3>
 
-<div class="card">
+        <p>
+          Recevez gratuitement les annonces, les nouvelles formations
+          et les offres promotionnelles publiées par DigitTech.
+        </p>
 
-<i class="fa-solid fa-users"></i>
+        <a class="btn"
+        href="https://chat.whatsapp.com/FYWNgCwQcP150XDOipoffU?s=cl&p=a&ilr=4"
+        target="_blank"
+        rel="noopener noreferrer">
 
-<h3>Groupe d'Annonce</h3>
+          <i class="fa-brands fa-whatsapp"></i>
+          Rejoindre le Groupe
 
-<p>
+        </a>
 
-Recevez gratuitement toutes les annonces, les nouvelles formations et les offres promotionnelles.
+      </article>
 
-</p>
+      <!-- DISPONIBILITÉ -->
 
-<br>
+      <article class="contact-card">
 
-<a class="btn"
+        <div class="contact-icon">
+          <i class="fa-solid fa-clock"></i>
+        </div>
 
-href="https://chat.whatsapp.com/FYWNgCwQcP150XDOipoffU?s=cl&p=a&ilr=4"
+        <h3>Disponibilité</h3>
 
-target="_blank">
+        <p>
+          Notre équipe répond à vos messages dès que possible
+          afin de vous accompagner dans votre inscription.
+        </p>
 
- Rejoindre le Groupe
+        <span class="contact-status">
+          <i class="fa-solid fa-circle"></i>
+          Assistance disponible
+        </span>
 
-</a>
+      </article>
 
-</div>
+    </div>
 
-<div class="card">
+  </section>
 
-<i class="fa-solid fa-clock"></i>
+  <!-- ================= POURQUOI NOUS CONTACTER ================= -->
 
-<h3>Disponibilité</h3>
+  <section class="why-contact-section">
 
-<p>
+    <div class="why-contact-heading">
 
-Notre équipe répond à vos messages dès que possible afin de vous accompagner dans votre inscription.
+      <h2>Pourquoi contacter DigitTech ?</h2>
 
-</p>
+      <p>
+        Nous sommes disponibles pour vous guider à chaque étape
+        de votre parcours de formation.
+      </p>
 
-</div>
+    </div>
 
-</div>
+    <div class="why-contact-grid">
 
-</section>
+      <article class="why-contact-card">
 
-<section>
+        <div class="why-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
 
-<h2>Pourquoi nous contacter ?</h2>
+        <h3>Informations</h3>
 
-<div class="cards">
+        <p>
+          Posez toutes vos questions sur nos formations,
+          les programmes et les compétences à acquérir.
+        </p>
 
-<div class="card">
+      </article>
 
-<i class="fa-solid fa-graduation-cap"></i>
+      <article class="why-contact-card">
 
-<h3>Informations</h3>
+        <div class="why-icon">
+          <i class="fa-solid fa-user-check"></i>
+        </div>
 
-<p>
+        <h3>Inscription</h3>
 
-Posez toutes vos questions sur nos formations.
+        <p>
+          Recevez la procédure d'inscription, les tarifs
+          et les modalités d'accès aux formations.
+        </p>
 
-</p>
+      </article>
 
-</div>
+      <article class="why-contact-card">
 
-<div class="card">
+        <div class="why-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
 
-<i class="fa-solid fa-user-check"></i>
+        <h3>Assistance</h3>
 
-<h3>Inscription</h3>
+        <p>
+          Nous vous accompagnons avant, pendant et après
+          votre formation selon vos besoins.
+        </p>
 
-<p>
+      </article>
 
-Recevez la procédure d'inscription et les modalités d'accès.
+    </div>
 
-</p>
+  </section>
 
-</div>
+  <!-- ================= STATISTIQUES ================= -->
 
-<div class="card">
+  <section class="contact-stats-section">
 
-<i class="fa-solid fa-headset"></i>
+    <div class="contact-stats-heading">
 
-<h3>Assistance</h3>
+      <h2>DigitTech en chiffres</h2>
 
-<p>
+    </div>
 
-Nous vous accompagnons avant, pendant et après votre formation.
+    <div class="contact-stats">
 
-</p>
+      <div class="contact-stat">
 
-</div>
+        <h3>500+</h3>
+        <p>Membres</p>
 
-</div>
+      </div>
 
-</section>
+      <div class="contact-stat">
 
-<section class="stats">
+        <h3>100+</h3>
+        <p>Participants</p>
 
-<div>
+      </div>
 
-<h1>500+</h1>
+      <div class="contact-stat">
 
-<p>Membres</p>
+        <h3>24/7</h3>
+        <p>Assistance</p>
 
-</div>
+      </div>
 
-<div>
+      <div class="contact-stat">
 
-<h1>100+</h1>
+        <h3>100%</h3>
+        <p>Accompagnement</p>
 
-<p>Participants</p>
+      </div>
 
-</div>
+    </div>
 
-<div>
+  </section>
 
-<h1>24/7</h1>
+  <!-- ================= APPEL FINAL ================= -->
 
-<p>Assistance</p>
+  <section class="contact-cta">
 
-</div>
+    <div class="contact-cta-content">
 
-<div>
+      <div class="cta-icon">
+        <i class="fa-solid fa-rocket"></i>
+      </div>
 
-<h1>100%</h1>
+      <h2>Rejoignez DigitTech dès aujourd'hui</h2>
 
-<p>Accompagnement</p>
+      <p>
+        Nous serons heureux de vous accompagner dans votre
+        apprentissage de l'Intelligence Artificielle et des
+        compétences digitales.
+      </p>
 
-</div>
+      <a class="btn"
+      href="https://wa.me/22657420577?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20m'inscrire%20%C3%A0%20une%20formation."
+      target="_blank"
+      rel="noopener noreferrer">
 
-</section>
+        <i class="fa-brands fa-whatsapp"></i>
+        S'inscrire
 
-<footer>
+      </a>
 
-<h2> Rejoignez DigitTech dès aujourd'hui</h2>
+    </div>
 
-<p>
+  </section>
 
-Nous serons heureux de vous accompagner dans votre apprentissage de l'Intelligence Artificielle.
+  <!-- ================= FOOTER ================= -->
 
-</p>
+  <footer class="contact-footer">
 
-<a class="btn"
+    <h2>Merci pour votre confiance</h2>
 
-href="https://wa.me/22657425077?text=Bonjour%20DigitTech%20!%20Je%20souhaite%20m'inscrire%20à%20une%20formation."
+    <p>
+      DigitTech vous accompagne dans votre apprentissage
+      de l'Intelligence Artificielle et des outils digitaux.
+    </p>
 
-target="_blank">
+    <a class="btn"
+    href="https://chat.whatsapp.com/FYWNgCwQcP150XDOipoffU?s=cl&p=a&ilr=4"
+    target="_blank"
+    rel="noopener noreferrer">
 
- S'inscrire
+      <i class="fa-brands fa-whatsapp"></i>
+      Rejoindre le Groupe d'Annonce
 
-</a>
+    </a>
 
-<p class="copy">
+    <p class="copy">
+      © 2026 DigitTech • Tous droits réservés
+    </p>
 
-© 2026 DigitTech • Tous droits réservés
+  </footer>
 
-</p>
+  <!-- ================= WHATSAPP FLOTTANT ================= -->
 
-</footer>
+  <a class="floating"
+  href="https://wa.me/22657420577"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contacter DigitTech sur WhatsApp">
 
-<a class="floating"
+    <i class="fa-brands fa-whatsapp"></i>
 
-href="https://wa.me/22657420577"
+  </a>
 
-target="_blank">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-</a>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
-
 </html>
